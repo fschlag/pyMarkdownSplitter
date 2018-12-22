@@ -78,7 +78,7 @@ def parse_file(inputfile):
     return ParsedFile(header_section, sections)
 
 
-def save_parsed_file_to_output_directory(parsed_file: ParsedFile, outputdir: string):
+def save_parsed_file_to_output_directory(parsed_file, outputdir):
     # Save header
     with open(outputdir + "/" + parsed_file.header_section.get_converted_title() + ".md", 'w') as f:
         f.write("% " + parsed_file.header_section.title)
