@@ -48,9 +48,9 @@ def create_link_for_index_file(title, raw_filename):
 # Currently only replaces 'first level links' e.g. "# Heading 1" with the corresponding html-file
 # ToDO: Find a way to replace different levels "##" and so on (need to collect all heading and map them in each section)
 def replace_local_link_with_global(line):
-    pattern = re.compile('(?<=\[local link\]\(#)([\w,-]+)')
+    pattern = re.compile('(?<=\]\(#)([\w,-]+)')
     for m in re.finditer(pattern, line):
-        line = line.replace("[local link](#" + m.group(0), "[local link](http://" + m.group(0) + ".html")
+        line = line.replace("](#" + m.group(0), "](http://" + m.group(0) + ".html")
     return line
 
 

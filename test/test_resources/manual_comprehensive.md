@@ -51,7 +51,7 @@ Some text in a subsection
 
 # Insert and Update
 
-Usually refers to a single entity. However, PriDE also supports mass updates
+Usually refers to a single entity. 
 
 ## Insert
 
