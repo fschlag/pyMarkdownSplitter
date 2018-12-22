@@ -54,7 +54,7 @@ def replace_local_link_with_global(line):
     return line
 
 
-def parse_file(inputfile) -> ParsedFile:
+def parse_file(inputfile):
     header_section = None
     sections = []
     with open(inputfile, 'r') as input:
