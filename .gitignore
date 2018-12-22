@@ -202,8 +202,6 @@ dmypy.json
 ### Python Patch ###
 .venv/
 
-.idea/
-
 ### VirtualEnv ###
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
@@ -217,3 +215,6 @@ pyvenv.cfg
 pip-selfcheck.json
 
 # End of https://www.gitignore.io/api/python,pycharm,virtualenv
+
+.idea/
+tmp_outdir/

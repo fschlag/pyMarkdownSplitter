@@ -91,6 +91,12 @@ def save_parsed_file_to_output_directory(parsed_file: ParsedFile, outputdir: str
                 f.write(line)
 
 
+def work(inputfile, outputdir):
+    create_output_directory(outputdir)
+    parsed_file = parse_file(inputfile)
+    save_parsed_file_to_output_directory(parsed_file, outputdir)
+
+
 if __name__ == '__main__':
     print("pyMarkdownSplitter (Version: " + VERSION + ")")
     argument_parser = argparse.ArgumentParser()
@@ -98,7 +104,4 @@ if __name__ == '__main__':
     argument_parser.add_argument("-o", "--outputdir",
                                  help="Output directory for the splitted markdowns. Created if missing.")
     args = argument_parser.parse_args()
-
-    create_output_directory(args.outputdir)
-    parsed_file = parse_file(args.inputfile)
-    save_parsed_file_to_output_directory(parsed_file, args.outputdir)
+    work(args.inputfile, args.outputdir)
