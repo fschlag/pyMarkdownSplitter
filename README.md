@@ -1,7 +1,7 @@
 # pyMarkdownSplitter (Version: 0.1)
 
 ## CI Status
-[![Build Status](https://travis-ci.org/pyMarkdownSplitter/pyMarkdownSplitter.svg)](https://travis-ci.org/fschlag/pyMarkdownSplitter)
+[![Build Status](https://travis-ci.org/fschlag/pyMarkdownSplitter.svg?branch=master)](https://travis-ci.org/fschlag/pyMarkdownSplitter)
 
 ## Usage
 ```
