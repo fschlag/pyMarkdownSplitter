@@ -2,7 +2,7 @@
 
 # Find and Query
 
-Here is a [local link](#insert-and-update) and another link [local link](#blub-and-update)
+Here is a [local link](#insert-and-update) and another link [local link](#entity-adapter-and-descriptor)
 
 Find means: expect a single result or none. Query means: expect an arbitrary
 number of results, possibly none.
@@ -82,4 +82,13 @@ How to update single record
 ## Mass updates
 
 How to update multiple records at a time
- 
+
+# Entity, Adapter, and Descriptor
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+
+## Test-heading

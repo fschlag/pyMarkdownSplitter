@@ -3,10 +3,9 @@
 import argparse
 import os
 import re
-import string
 import sys
 
-VERSION = "0.1"
+VERSION = "0.2"
 HELP_TEXT = "pymarkdownsplitter.py -i <inputfile> -o <outputdir>"
 
 
@@ -19,7 +18,13 @@ class Section:
         return self.title.rstrip('\n')
 
     def get_converted_title(self):
-        return self.get_cleaned_title().lower().replace(' ', '-')
+        # to lower
+        converted_title = self.get_cleaned_title().lower()
+        # replace whitespace with underscore
+        converted_title = converted_title.replace(' ', '-')
+        # remove non valid filename characters
+        converted_title = re.sub('[^0-9a-zA-Z-]+', '', converted_title)
+        return converted_title
 
 
 class ParsedFile:
