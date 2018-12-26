@@ -1,4 +1,7 @@
-# pyMarkdownSplitter (Version: 0.1)
+# pyMarkdownSplitter (Version: 0.2)
+
+## Latest changes
+* 0.2: Remove non valid filename characters (e.g. `',', ';', '/'`).
 
 ## CI Status
 [![Build Status](https://travis-ci.org/fschlag/pyMarkdownSplitter.svg?branch=master)](https://travis-ci.org/fschlag/pyMarkdownSplitter)
