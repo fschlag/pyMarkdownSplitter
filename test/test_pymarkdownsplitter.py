@@ -28,14 +28,16 @@ class PyMarkdownSplitterTest(unittest.TestCase):
         ENTITY_ADAPTER_AND_DESCRIPTOR_FILE = TMP_WORK_DIR + "entity-adapter-and-descriptor.md"
 
         # Test Index File
-        self.assertFileExistsAndContainsTest(MANUAL_FILE, "[Find and Query](http://find-and-query.html)")
-        self.assertFileExistsAndContainsTest(MANUAL_FILE, "[Insert and Update](http://insert-and-update.html)")
-        self.assertFileExistsAndContainsTest(MANUAL_FILE, "[Entity, Adapter, and Descriptor](http://entity-adapter-and-descriptor.html)")
+        self.assertFileExistsAndContainsTest(MANUAL_FILE, "[Find and Query](find-and-query.html)")
+        self.assertFileExistsAndContainsTest(MANUAL_FILE, "[Insert and Update](insert-and-update.html)")
+        self.assertFileExistsAndContainsTest(MANUAL_FILE, "[Entity, Adapter, and Descriptor](entity-adapter-and-descriptor.html)")
         # Test correct heading for sub-section files
         self.assertFileExistsAndContainsTest(INSERT_AND_UPDATE_FILE, "% Insert and Update")
         # Test local link to global link conversion
-        self.assertFileExistsAndContainsTest(FIND_AND_QUERY_FILE, "[local link](http://insert-and-update.html)")
-        self.assertFileExistsAndContainsTest(FIND_AND_QUERY_FILE, "[local link](http://entity-adapter-and-descriptor.html)")
+        self.assertFileExistsAndContainsTest(FIND_AND_QUERY_FILE, "[local link](insert-and-update.html)")
+        self.assertFileExistsAndContainsTest(FIND_AND_QUERY_FILE, "[local link](entity-adapter-and-descriptor.html)")
+
+        self.assertTrue(os.path.isfile(ENTITY_ADAPTER_AND_DESCRIPTOR_FILE))
 
 
 

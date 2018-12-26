@@ -1,7 +1,12 @@
-# pyMarkdownSplitter (Version: 0.2)
+# pyMarkdownSplitter (Version: 0.3)
 
 ## Latest changes
-* 0.2: Remove non valid filename characters (e.g. `',', ';', '/'`).
+### 0.3
+* Removed leading `http://` in local to global link conversion
+* Previous and next chapter Links on bottom of each page
+* Inputfile and Outputdir are now required arguments (they were before, but I've never checked  ;-))
+### 0.2
+* Remove non valid filename characters (e.g. `',', ';', '/'`).
 
 ## CI Status
 [![Build Status](https://travis-ci.org/fschlag/pyMarkdownSplitter.svg?branch=master)](https://travis-ci.org/fschlag/pyMarkdownSplitter)
