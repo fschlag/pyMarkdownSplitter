@@ -2,7 +2,7 @@
 
 ## Latest changes
 ### 0.4
-* More generic way to generate navigation links for previous and next section (see [Navigation template example](Navigation template example))
+* More generic way to generate navigation links for previous and next section (see [Navigation template example](#navigation-template-example))
 * Refactoring
 ### 0.3
 * Removed leading `http://` in local to global link conversion
