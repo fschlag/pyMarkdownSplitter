@@ -1,6 +1,9 @@
-# pyMarkdownSplitter (Version: 0.3)
+# pyMarkdownSplitter (Version: 0.4)
 
 ## Latest changes
+### 0.4
+* More generic way to generate navigation links for previous and next section (see [Navigation template example](Navigation template example))
+* Refactoring
 ### 0.3
 * Removed leading `http://` in local to global link conversion
 * Previous and next chapter Links on bottom of each page
@@ -13,8 +16,39 @@
 
 ## Usage
 ```
-python pymarkdownsplitter.py -i <inputfile> -o <outputdir>
+python pymarkdownsplitter.py -i <inputfile> -o <outputdir> [-nt NAVIGATION_TEMPLATE]
 ```
+
+### Navigation template example
+By default pyMarkdownSplitter generates a navigation like this:
+
+```[&larr; Previous Section](find-and-query.html) | [Next Section &rarr;](entity-adapter-and-descriptor.html)```
+
+Leads to: [&larr; Previous Section](previous.html) | [Next Section &rarr;](next.html)
+
+If you want to use a custom template, you can create a template file using the following _markers_:
+
+Marker | Description
+--- | ---
+`#pymarkdown-previous-start#` | Marks the start of the previous link part
+`#pymarkdown-previous-end#` | Marks the end of the previous link part
+`#pymarkdown-previous-link#` | Placeholder for the previous link. Will be replaced with the corresponding html file.
+`#pymarkdown-next-start#` | Marks the start of the next link part
+`#pymarkdown-next-end#` | Marks the end of the next link part
+`#pymarkdown-next-link#`| Placeholder for the next link. Will be replaced with the corresponding html file.
+`#pymarkdown-separator-start#` | Marks the start of the separator i.e. the part between next and previous. Is only created if next AND previous link are generated. 
+`#pymarkdown-separator-end#` | Marks the end of the separator.
+
+#### Default template
+```
+#pymarkdown-previous-start#[&larr; Previous Section](#pymarkdown-previous-link#)#pymarkdown-previous-end##pymarkdown-separator-start# | #pymarkdown-separator-end##pymarkdown-next-start#[Next Section &rarr;](#pymarkdown-next-link#)#pymarkdown-next-end#
+```
+
+#### Example HTML template (see [templates/html_navigation.template](html_navigation.template))
+```
+<div class="subpage-navigation"><p>#pymarkdown-previous-start#<a id="prev" href="#pymarkdown-previous-link#"> Prev.</a>#pymarkdown-previous-end##pymarkdown-separator-start# | #pymarkdown-separator-end##pymarkdown-next-start#<a id="next" href="#pymarkdown-next-link#">Next </a>#pymarkdown-next-end#</p></div>
+```
+
 
 ## How it works
 pyMarkdownSplitter reads the `inputfile` and searches for top-level headers (`#` aka H1).

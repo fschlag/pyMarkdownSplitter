@@ -28,7 +28,7 @@ class PyMarkdownSplitterTest(unittest.TestCase):
 
     def testComprehensiveFile(self):
         """Test a comprensive file"""
-        pymarkdownsplitter.work(TEST_RESOURCES + "manual_comprehensive.md", TMP_WORK_DIR)
+        pymarkdownsplitter.work(TEST_RESOURCES + "manual_comprehensive.md", TMP_WORK_DIR, pymarkdownsplitter.DEFAULT_NAVIGATION_TEMPLATE)
 
         # Test Index File
         self.assertFileExistsAndContainsText(MANUAL_FILE, "[Find and Query](find-and-query.html)")
@@ -41,7 +41,7 @@ class PyMarkdownSplitterTest(unittest.TestCase):
         self.assertFileExistsAndContainsText(FIND_AND_QUERY_FILE, "[local link](entity-adapter-and-descriptor.html)")
 
         # Test for correct section links
-        self.assertFileContainsText(FIND_AND_QUERY_FILE, "[&uarr; Index](manual.html)")
+        self.assertFileContainsText(FIND_AND_QUERY_FILE, "[&larr; Previous Section](manual.html)")
         self.assertFileContainsText(FIND_AND_QUERY_FILE, "[Next Section &rarr;](insert-and-update.html)")
 
         self.assertFileContainsText(INSERT_AND_UPDATE_FILE, "[&larr; Previous Section](find-and-query.html)")
