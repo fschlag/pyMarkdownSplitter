@@ -44,7 +44,7 @@ Marker | Description
 #pymarkdown-previous-start#[&larr; Previous Section](#pymarkdown-previous-link#)#pymarkdown-previous-end##pymarkdown-separator-start# | #pymarkdown-separator-end##pymarkdown-next-start#[Next Section &rarr;](#pymarkdown-next-link#)#pymarkdown-next-end#
 ```
 
-#### Example HTML template (see [templates/html_navigation.template](html_navigation.template))
+#### Example HTML template (see [templates/html_navigation.template](templates/html_navigation.template))
 ```
 <div class="subpage-navigation"><p>#pymarkdown-previous-start#<a id="prev" href="#pymarkdown-previous-link#"> Prev.</a>#pymarkdown-previous-end##pymarkdown-separator-start# | #pymarkdown-separator-end##pymarkdown-next-start#<a id="next" href="#pymarkdown-next-link#">Next </a>#pymarkdown-next-end#</p></div>
 ```
