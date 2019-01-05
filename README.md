@@ -1,6 +1,10 @@
-# pyMarkdownSplitter (Version: 0.4)
+# pyMarkdownSplitter (Version: 0.5)
 
 ## Latest changes
+### 0.5
+* Link to the next/first chapter in index file
+* Empty line between links in index file to avoid links in same line
+* Don't create new section for `#` in code blocks
 ### 0.4
 * More generic way to generate navigation links for previous and next section (see [Navigation template example](#navigation-template-example))
 * Refactoring

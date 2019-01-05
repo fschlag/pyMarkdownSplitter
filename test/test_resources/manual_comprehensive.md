@@ -71,6 +71,17 @@ How to update single record
 
 How to update single record
 
+```
+# Entity base class
+java util.EntityGeneratorWithExampleConfig
+CUSTOMER(id) inherit.AbstractEntity -b
+ 
+# Adapter base class
+java util.EntityGeneratorWithExampleConfig
+CUSTOMER(id) inherit.AbstractAdapter inherit.AbstractEntity
+}
+```
+
 How to update single record
 
 How to update single record
