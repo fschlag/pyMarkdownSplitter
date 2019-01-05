@@ -5,7 +5,7 @@ import os
 import re
 import sys
 
-VERSION = "0.4"
+VERSION = "0.5"
 HELP_TEXT = "pymarkdownsplitter.py -i <inputfile> -o <outputdir>"
 
 EMPTY_LINE = '\n'
